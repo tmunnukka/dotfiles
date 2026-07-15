@@ -5,6 +5,13 @@
 *.swp
 .DS_Store
 
+# SlickEdit - generoitu tila ja välimuistit
+*.vtg
+*.vpwhist
+*.vpwhistu
+vsbackup/
+.vs_cache/
+
 # Salaisuudet ja avaimet
 *.pem
 *.key
