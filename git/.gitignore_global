@@ -6,6 +6,8 @@
 .DS_Store
 
 # SlickEdit - generoitu tila ja välimuistit
+*.vpj
+*.vpw
 *.vtg
 *.vpwhist
 *.vpwhistu
