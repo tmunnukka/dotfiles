@@ -1,0 +1,30 @@
+;;; utils.el --- your description -*- lexical-binding: t; -*-
+
+(defun my/native-compile-package (dir &optional preload-libs)
+  "Recursively native-compile all .el files in DIR.
+
+If PRELOAD-LIBS is non-nil, it should be a list of libraries to
+`require' before compiling (so the compiler knows about external
+functions). This helps reduce 'function not known to be defined'
+warnings.
+
+Example:
+  (my/native-compile-package
+    \"~/.emacs.d/site-lisp/magit/lisp/\"
+    '(dired dired-aux epg message))"
+  (interactive "DDirectory to native-compile: ")
+  (let ((abs-dir (expand-file-name dir)))
+    (when preload-libs
+      (dolist (lib preload-libs)
+        (condition-case err
+            (require lib)
+          (error (message \"[WARN] Could not load %s: %s\" lib err)))))
+    (when (file-directory-p abs-dir)
+      ;; delete stale .elc files
+      (mapc #'delete-file (directory-files-recursively abs-dir "\\.elc$"))
+      (message "🔧 Native-compiling %s..." abs-dir)
+      (native-compile-async abs-dir 'recursively)
+      (message "✅ Native compilation started for %s" abs-dir))))
+
+;;; utils.el ends here
+
