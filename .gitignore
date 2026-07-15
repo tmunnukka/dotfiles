@@ -1,0 +1,41 @@
+# Emacsin roskat
+*~
+\#*\#
+.#*
+*.elc
+*.eln
+
+# Emacsin generoitu tila (jos joskus päätyy repon puolelle)
+emacs/.emacs.d/elpa/
+emacs/.emacs.d/eln-cache/
+emacs/.emacs.d/auto-save-list/
+emacs/.emacs.d/backups/
+emacs/.emacs.d/transient/
+emacs/.emacs.d/custom.el
+emacs/.emacs.d/history
+emacs/.emacs.d/recentf
+emacs/.emacs.d/bookmarks
+emacs/.emacs.d/tramp
+emacs/.emacs.d/projects
+emacs/.emacs.d/.lsp-session*
+
+# Zsh:n ajonaikainen tila
+.zsh_history
+.zcompdump*
+*.zwc
+
+# Yleiset editori/järjestelmäroskat
+.DS_Store
+*.swp
+*.orig
+*.rej
+
+# Salaisuudet — älä koskaan versioi
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+.netrc
+.authinfo*
+*token*
+*secret*
