@@ -1,0 +1,56 @@
+
+# Regular colors
+BLACK='\033[0;30m'
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+BLUE='\033[0;34m'
+MAGENTA='\033[0;35m'
+CYAN='\033[0;36m'
+WHITE='\033[0;37m'
+
+# Bright/Bold colors
+BRIGHT_BLACK='\033[0;90m'   # (Gray)
+BRIGHT_RED='\033[0;91m'
+BRIGHT_GREEN='\033[0;92m'
+BRIGHT_YELLOW='\033[0;93m'
+BRIGHT_BLUE='\033[0;94m'
+BRIGHT_MAGENTA='\033[0;95m'
+BRIGHT_CYAN='\033[0;96m'
+BRIGHT_WHITE='\033[0;97m'
+
+## Background colors
+
+# Regular backgrounds
+BG_BLACK='\033[40m'
+BG_RED='\033[41m'
+BG_GREEN='\033[42m'
+BG_YELLOW='\033[43m'
+BG_BLUE='\033[44m'
+BG_MAGENTA='\033[45m'
+BG_CYAN='\033[46m'
+BG_WHITE='\033[47m'
+
+# Bright backgrounds
+BG_BRIGHT_BLACK='\033[100m'
+BG_BRIGHT_RED='\033[101m'
+BG_BRIGHT_GREEN='\033[102m'
+BG_BRIGHT_YELLOW='\033[103m'
+BG_BRIGHT_BLUE='\033[104m'
+BG_BRIGHT_MAGENTA='\033[105m'
+BG_BRIGHT_CYAN='\033[106m'
+BG_BRIGHT_WHITE='\033[107m'
+
+# TEXT styles
+
+RESET='\033[0m'           # Reset all attributes
+BOLD='\033[1m'
+DIM='\033[2m'
+ITALIC='\033[3m'
+UNDERLINE='\033[4m'
+BLINK='\033[5m'
+REVERSE='\033[7m'         # Swap foreground/background
+HIDDEN='\033[8m'
+STRIKETHROUGH='\033[9m'
+
+
