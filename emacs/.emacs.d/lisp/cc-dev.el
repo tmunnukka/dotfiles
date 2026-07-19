@@ -174,8 +174,15 @@
 (use-package embark
   ;; Context menu on anything: point at a symbol, C-., act on it
   ;; (find refs, rename, google it...). The "right-click" of Emacs.
-  :bind (("C-." . embark-act))
-  :config (use-package embark-consult))
+  :bind (("C-." . embark-act)))
+
+(use-package embark-consult
+  ;; Glue between the two: exporting embark collections into consult
+  ;; buffers and previews. Must be a TOP-LEVEL declaration -- nested
+  ;; inside embark's :config it never installs (embark loads lazily),
+  ;; and both packages warn about its absence at startup.
+  :after (embark consult)
+  :hook (embark-collect-mode . consult-preview-at-point-mode))
 
 ;;; ---------------------------------------------------------------------
 ;;; 5. Formatting
